@@ -9,19 +9,25 @@ public class EmergencyBookingResponseDto {
     private double latitude;
     private double longitude;
     private User user;
+    private String message;
 
-    // Constructor, Getters, and Setters
-    public EmergencyBookingResponseDto (EmergencyTypeEnum emergencyTypeEnum,User user, String address, double latitude, double longitude) {
+    // Constructor,
+    public EmergencyBookingResponseDto (EmergencyTypeEnum emergencyTypeEnum,User user, String address, double latitude, double longitude, String message) {
         this.emergencyTypeEnum = emergencyTypeEnum;
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
         this.user = user;
+        this.message = message;
     }
 
+    // Getters, and Setters
     public EmergencyTypeEnum getEmergencyTypeEnum() {
         return emergencyTypeEnum;
     }
+
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
 
     public User getUser(){
         return user;

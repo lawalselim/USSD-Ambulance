@@ -2605,3 +2605,125 @@ Caused by: org.hibernate.AnnotationException: Association 'com.example.backend.e
 2024-03-30T16:44:06.121Z  INFO 51259 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-03-30T16:44:06.132Z  INFO 51259 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-03-30T16:44:06.166Z  INFO 51259 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-30T17:28:42.098Z  INFO 56260 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 21.0.1 with PID 56260 (/Users/apple/Documents/GitHub/USSD-Ambulance/backend/target/classes started by apple in /Users/apple/Documents/GitHub/USSD-Ambulance/backend)
+2024-03-30T17:28:42.106Z DEBUG 56260 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-03-30T17:28:42.113Z  INFO 56260 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-30T17:28:45.320Z  INFO 56260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T17:28:45.512Z  INFO 56260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 4 JPA repository interfaces.
+2024-03-30T17:28:47.278Z  INFO 56260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8005 (http)
+2024-03-30T17:28:47.301Z  INFO 56260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-30T17:28:47.302Z  INFO 56260 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-03-30T17:28:47.509Z  INFO 56260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-30T17:28:47.510Z  INFO 56260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4977 ms
+2024-03-30T17:28:47.903Z  INFO 56260 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2024-03-30T17:28:47.904Z  INFO 56260 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-03-30T17:28:47.904Z  INFO 56260 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-03-30T17:28:47.928Z  INFO 56260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-30T17:28:48.349Z  INFO 56260 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e1a986c
+2024-03-30T17:28:48.353Z  INFO 56260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-30T17:28:48.371Z  INFO 56260 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/ussddb (MySQL 5.5)
+2024-03-30T17:28:48.535Z  INFO 56260 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.034s)
+2024-03-30T17:28:48.536Z  WARN 56260 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-03-30T17:28:48.588Z  INFO 56260 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `ussddb`: << Empty Schema >>
+2024-03-30T17:28:48.596Z  INFO 56260 --- [main] o.f.core.internal.command.DbMigrate      : Schema `ussddb` is up to date. No migration necessary.
+2024-03-30T17:28:48.915Z  INFO 56260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T17:28:49.092Z  INFO 56260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-03-30T17:28:49.101Z  INFO 56260 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-30T17:28:49.971Z  INFO 56260 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T17:28:50.128Z  WARN 56260 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-03-30T17:28:52.835Z  INFO 56260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T17:28:52.991Z  INFO 56260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T17:28:54.311Z DEBUG 56260 --- [main] c.e.b.Configs.JwtAuthenticationFilter    : Filter 'jwtAuthenticationFilter' configured for use
+2024-03-30T17:28:55.279Z  INFO 56260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26b150cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ff3028, org.springframework.security.web.context.SecurityContextHolderFilter@7be85f15, org.springframework.security.web.header.HeaderWriterFilter@4f3b11e6, org.springframework.security.web.authentication.logout.LogoutFilter@32eac39b, com.example.backend.Configs.JwtAuthenticationFilter@2bfa5678, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@790ea58f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@410e043b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45e68fac, org.springframework.security.web.session.SessionManagementFilter@2162598, org.springframework.security.web.access.ExceptionTranslationFilter@306c8e09, org.springframework.security.web.access.intercept.AuthorizationFilter@24bc06dd]
+2024-03-30T17:28:55.876Z  INFO 56260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8005 (http) with context path ''
+2024-03-30T17:28:56.300Z  INFO 56260 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 17.414 seconds (process running for 22.021)
+2024-03-30T17:29:38.023Z  INFO 56260 --- [http-nio-8005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-30T17:29:38.024Z  INFO 56260 --- [http-nio-8005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-30T17:29:38.029Z  INFO 56260 --- [http-nio-8005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-03-30T17:30:06.318Z  INFO 56260 --- [http-nio-8005-exec-3] c.e.b.service.EmergencyBookingService    : Geocoding successful for address: olorunda aba pakiti
+2024-03-30T17:30:06.597Z  INFO 56260 --- [http-nio-8005-exec-3] c.e.b.service.EmergencyBookingService    : Emergency booking saved successfully with ID: 52
+2024-03-30T17:30:48.773Z  INFO 56260 --- [http-nio-8005-exec-4] c.e.b.service.EmergencyBookingService    : Geocoding successful for address: olorunda aba pakiti
+2024-03-30T17:30:48.776Z  INFO 56260 --- [http-nio-8005-exec-4] c.e.b.service.EmergencyBookingService    : Emergency booking saved successfully with ID: 53
+2024-03-30T17:53:20.593Z  INFO 56260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T17:53:20.612Z  INFO 56260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-30T17:53:20.668Z  INFO 56260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-30T17:53:41.076Z  INFO 58051 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 21.0.1 with PID 58051 (/Users/apple/Documents/GitHub/USSD-Ambulance/backend/target/classes started by apple in /Users/apple/Documents/GitHub/USSD-Ambulance/backend)
+2024-03-30T17:53:41.079Z DEBUG 58051 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-03-30T17:53:41.082Z  INFO 58051 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-30T17:53:43.290Z  INFO 58051 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T17:53:43.463Z  INFO 58051 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 4 JPA repository interfaces.
+2024-03-30T17:53:45.168Z  INFO 58051 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8005 (http)
+2024-03-30T17:53:45.194Z  INFO 58051 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-30T17:53:45.195Z  INFO 58051 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-03-30T17:53:45.384Z  INFO 58051 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-30T17:53:45.385Z  INFO 58051 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4124 ms
+2024-03-30T17:53:45.888Z  INFO 58051 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2024-03-30T17:53:45.888Z  INFO 58051 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-03-30T17:53:45.889Z  INFO 58051 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-03-30T17:53:45.911Z  INFO 58051 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-30T17:53:46.335Z  INFO 58051 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e50df2e
+2024-03-30T17:53:46.338Z  INFO 58051 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-30T17:53:46.358Z  INFO 58051 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/ussddb (MySQL 5.5)
+2024-03-30T17:53:46.536Z  INFO 58051 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.054s)
+2024-03-30T17:53:46.540Z  WARN 58051 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-03-30T17:53:46.679Z  INFO 58051 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `ussddb`: << Empty Schema >>
+2024-03-30T17:53:46.684Z  INFO 58051 --- [main] o.f.core.internal.command.DbMigrate      : Schema `ussddb` is up to date. No migration necessary.
+2024-03-30T17:53:47.014Z  INFO 58051 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T17:53:47.420Z  INFO 58051 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-03-30T17:53:47.427Z  INFO 58051 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-30T17:53:48.144Z  INFO 58051 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T17:53:48.286Z  WARN 58051 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-03-30T17:53:51.747Z  INFO 58051 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T17:53:51.899Z  INFO 58051 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T17:53:53.063Z DEBUG 58051 --- [main] c.e.b.Configs.JwtAuthenticationFilter    : Filter 'jwtAuthenticationFilter' configured for use
+2024-03-30T17:53:54.119Z  INFO 58051 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23b3afb4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2162598, org.springframework.security.web.context.SecurityContextHolderFilter@6c38f4de, org.springframework.security.web.header.HeaderWriterFilter@34766f4b, org.springframework.security.web.authentication.logout.LogoutFilter@28da5c4d, com.example.backend.Configs.JwtAuthenticationFilter@6b04689e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@923bf67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@220d7eb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cf1b5fb, org.springframework.security.web.session.SessionManagementFilter@36a25457, org.springframework.security.web.access.ExceptionTranslationFilter@2f408960, org.springframework.security.web.access.intercept.AuthorizationFilter@15d68a50]
+2024-03-30T17:53:54.748Z  INFO 58051 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8005 (http) with context path ''
+2024-03-30T17:53:55.163Z  INFO 58051 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 15.847 seconds (process running for 19.341)
+2024-03-30T17:54:01.390Z  INFO 58051 --- [http-nio-8005-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-30T17:54:01.391Z  INFO 58051 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-30T17:54:01.395Z  INFO 58051 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-30T17:54:05.132Z  INFO 58051 --- [http-nio-8005-exec-2] c.e.b.service.EmergencyBookingService    : Geocoding successful for address: olorunda aba pakiti
+2024-03-30T17:54:05.211Z  INFO 58051 --- [http-nio-8005-exec-2] c.e.b.service.EmergencyBookingService    : Emergency booking saved successfully with ID: 102
+2024-03-30T17:56:26.436Z  INFO 58051 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T17:56:26.446Z  INFO 58051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-30T17:56:26.502Z  INFO 58051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-30T17:56:42.344Z  INFO 58286 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 21.0.1 with PID 58286 (/Users/apple/Documents/GitHub/USSD-Ambulance/backend/target/classes started by apple in /Users/apple/Documents/GitHub/USSD-Ambulance/backend)
+2024-03-30T17:56:42.347Z DEBUG 58286 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-03-30T17:56:42.351Z  INFO 58286 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-30T17:56:44.283Z  INFO 58286 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T17:56:44.439Z  INFO 58286 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 4 JPA repository interfaces.
+2024-03-30T17:56:45.982Z  INFO 58286 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8005 (http)
+2024-03-30T17:56:46.005Z  INFO 58286 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-30T17:56:46.006Z  INFO 58286 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-03-30T17:56:46.220Z  INFO 58286 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-30T17:56:46.221Z  INFO 58286 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3639 ms
+2024-03-30T17:56:46.586Z  INFO 58286 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2024-03-30T17:56:46.586Z  INFO 58286 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-03-30T17:56:46.587Z  INFO 58286 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-03-30T17:56:46.606Z  INFO 58286 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-30T17:56:47.109Z  INFO 58286 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39549f33
+2024-03-30T17:56:47.114Z  INFO 58286 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-30T17:56:47.132Z  INFO 58286 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/ussddb (MySQL 5.5)
+2024-03-30T17:56:47.276Z  INFO 58286 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.026s)
+2024-03-30T17:56:47.276Z  WARN 58286 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-03-30T17:56:47.304Z  INFO 58286 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `ussddb`: << Empty Schema >>
+2024-03-30T17:56:47.308Z  INFO 58286 --- [main] o.f.core.internal.command.DbMigrate      : Schema `ussddb` is up to date. No migration necessary.
+2024-03-30T17:56:47.577Z  INFO 58286 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T17:56:47.715Z  INFO 58286 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-03-30T17:56:47.721Z  INFO 58286 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-30T17:56:48.387Z  INFO 58286 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T17:56:48.521Z  WARN 58286 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-03-30T17:56:50.451Z  INFO 58286 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T17:56:50.619Z  INFO 58286 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T17:56:51.694Z DEBUG 58286 --- [main] c.e.b.Configs.JwtAuthenticationFilter    : Filter 'jwtAuthenticationFilter' configured for use
+2024-03-30T17:56:52.683Z  INFO 58286 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@83bbab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67b2c8bb, org.springframework.security.web.context.SecurityContextHolderFilter@60510791, org.springframework.security.web.header.HeaderWriterFilter@56bf6f1e, org.springframework.security.web.authentication.logout.LogoutFilter@2662e3ff, com.example.backend.Configs.JwtAuthenticationFilter@43de88f3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a1689e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23b3afb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32029cd, org.springframework.security.web.session.SessionManagementFilter@cef23a8, org.springframework.security.web.access.ExceptionTranslationFilter@2c7ac998, org.springframework.security.web.access.intercept.AuthorizationFilter@1f3f0d25]
+2024-03-30T17:56:53.321Z  INFO 58286 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8005 (http) with context path ''
+2024-03-30T17:56:54.000Z  INFO 58286 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 13.19 seconds (process running for 16.162)
+2024-03-30T17:57:21.596Z  INFO 58286 --- [http-nio-8005-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-30T17:57:21.598Z  INFO 58286 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-30T17:57:21.606Z  INFO 58286 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-03-30T17:57:24.609Z  INFO 58286 --- [http-nio-8005-exec-2] c.e.b.service.EmergencyBookingService    : Geocoding successful for address: olorunda aba pakiti
+2024-03-30T17:57:24.685Z  INFO 58286 --- [http-nio-8005-exec-2] c.e.b.service.EmergencyBookingService    : Emergency booking saved successfully with ID: 152
+2024-03-30T18:12:40.543Z  INFO 58286 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:12:40.567Z  INFO 58286 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-30T18:12:40.643Z  INFO 58286 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
