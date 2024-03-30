@@ -6,9 +6,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
-@Table(name = "roles")
+@Table(name ="emergencytype")
 @Entity
-public class Role {
+public class EmergencyType {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
@@ -16,7 +16,7 @@ public class Role {
 
     @Column(unique = true, nullable = false)
     @Enumerated(EnumType.STRING)
-    private RoleEnum name;
+    private EmergencyTypeEnum name;
 
     @Column(nullable = false)
     private String description;
@@ -29,20 +29,17 @@ public class Role {
     @Column(name = "updated_at")
     private Date updatedAt;
 
-    // Getters and setters here....
-    public RoleEnum getName() {
-        return name;
-    }
-    public Role setName(RoleEnum name) {
+    public EmergencyType setName(EmergencyTypeEnum name) {
         this.name = name;
         return this;
     }
 
-    public Role setDescription(String description) {
+    public EmergencyType setDescription(String description) {
         this.description = description;
         return this;
     }
 
-
-
+    public EmergencyTypeEnum getName() {
+        return name;
+    }
 }
