@@ -72,7 +72,6 @@ public class EmergencyBookingService {
         booking.setLatitude(coordinates[0]);
         booking.setLongitude(coordinates[1]);
 
-
         booking = bookingRepository.save(booking); // Persist the booking
         logger.info("Emergency booking saved successfully with ID: {}", booking.getId()); // log response message in console
 
@@ -81,4 +80,7 @@ public class EmergencyBookingService {
         // The EmergencyBookingResponseDto's constructor is expected to match these parameters
         return new EmergencyBookingResponseDto(booking.getEmergencyTypeEnum(), user, booking.getAddress(), booking.getLatitude(), booking.getLongitude(),successMessage);
     }
+
+
+
 }
