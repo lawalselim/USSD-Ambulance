@@ -5,7 +5,7 @@ import React from "react";
 import { Card, Container, Row } from "reactstrap";
 
 // core components
-import Header from "components/Headers/Header.js";
+import StatCard from "../../components/Headers/StatCard.js";
 
 const MapWrapper = () => {
   const mapRef = React.useRef(null);
@@ -100,7 +100,7 @@ const MapWrapper = () => {
 const Maps = () => {
   return (
     <>
-      <Header />
+      <StatCard />
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>

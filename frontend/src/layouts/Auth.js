@@ -70,7 +70,7 @@ const Auth = (props) => {
             </svg>
           </div>
         </div>
-        {/* Page content */}
+        {/* Login route goes here  */}
         <Container className="mt--8 pb-5">
           <Row className="justify-content-center">
             <Routes>
@@ -80,7 +80,6 @@ const Auth = (props) => {
           </Row>
         </Container>
       </div>
-      <AuthFooter />
     </>
   );
 };
