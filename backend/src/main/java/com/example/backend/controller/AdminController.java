@@ -1,21 +1,27 @@
 package com.example.backend.controller;
 
+import com.example.backend.dto.AddressDto;
+import com.example.backend.dto.AmbulanceCreateDto;
 import com.example.backend.dto.RegisterUserDto;
+import com.example.backend.entities.Address;
+import com.example.backend.entities.Ambulance;
 import com.example.backend.entities.EmergencyBooking;
 import com.example.backend.entities.User;
 import com.example.backend.service.AdminService;
 import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @RequestMapping("/admins/")
-@PreAuthorize("hasRole('SUPER_ADMIN')")
+//@PreAuthorize("hasRole('SUPER_ADMIN')")
 @RestController
 public class AdminController {
     @Autowired
@@ -66,6 +72,19 @@ public class AdminController {
         stats.put("totalBookings", adminService.getTotalBookings());
         //stats.put("totalFailedBookings", adminService.getTotalFailedBookings());
         return stats;
+    }
+
+    // create ambulance goes here
+    @PostMapping("/createambulance")
+    public Ambulance createAmbulance(@RequestBody AmbulanceCreateDto ambulanceCreateDto) {
+        return adminService.createAmbulance(ambulanceCreateDto);
+    }
+
+    //create address service
+    @PostMapping("/createaddress")
+    public ResponseEntity<Address> createAddress(@Valid @RequestBody AddressDto addressDto) {
+        Address createdAddress = adminService.createAddress(addressDto);
+        return new ResponseEntity<>(createdAddress, HttpStatus.CREATED);
     }
 
 }

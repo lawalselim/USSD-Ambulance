@@ -20,6 +20,12 @@ public class EmergencyBooking {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "ambulance_id")
+    private Ambulance ambulance; // Reference to an Ambulance
+
+    //private String status; // Status of the booking, e.g., "PENDING", "ASSIGNED", "COMPLETED"
+
     //Constructor for getter and setters
 
     public EmergencyBooking(){}
@@ -73,5 +79,21 @@ public class EmergencyBooking {
         this.longitude = longitude;
         return this;
     }
+
+    public Ambulance getAmbulance() {
+        return ambulance;
+    }
+
+    public void setAmbulance(Ambulance ambulance) {
+        this.ambulance = ambulance;
+    }
+
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
 
 }

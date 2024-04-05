@@ -1,23 +1,34 @@
 package com.example.backend.service;
 
+import com.example.backend.entities.Address;
 import com.example.backend.entities.EmergencyBooking;
 import com.example.backend.entities.User;
+import com.example.backend.repository.AddressRepository;
+import com.example.backend.dto.AddressDto;
+import com.example.backend.repository.AmbulanceRepository;
 import com.example.backend.repository.EmergencyBookingRepository;
+import com.example.backend.entities.Ambulance;
+import com.example.backend.dto.AmbulanceCreateDto;
 import com.example.backend.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
 public class AdminService {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private AmbulanceRepository ambulanceRepository;
 
     @Autowired
     private EmergencyBookingRepository emergencyBookingRepository;
+
+    @Autowired
+    private AddressRepository addressRepository;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -47,5 +58,24 @@ public class AdminService {
     }
 
      */
+
+    //Create an ambulance
+    public Ambulance createAmbulance(AmbulanceCreateDto ambulanceCreateDto) {
+        Ambulance ambulance = new Ambulance();
+        ambulance.setLicensePlate(ambulanceCreateDto.getLicensePlate());
+        ambulance.setIsAssigned(ambulanceCreateDto.getIsAssigned());
+        return ambulanceRepository.save(ambulance);
+    }
+
+    //create an address by admin
+
+    @Transactional
+    public Address createAddress(AddressDto addressDto) {
+        Address address = new Address();
+        address.setLocation(addressDto.getLocation());
+        // Optionally initialize assignedAmbulances with 0 if not provided
+        address.setAssignedAmbulances(addressDto.getAssignedAmbulances() != null ? addressDto.getAssignedAmbulances() : 0);
+        return addressRepository.save(address);
+    }
 
 }

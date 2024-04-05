@@ -19,9 +19,9 @@ public class EmergencyBookingController {
     private EmergencyBookingService bookingService;
 
     //TODO: 1. If ambulance booking doesn't work, uncomment has role - this is working
-    //@PreAuthorize("isAuthenticated()" )
+    @PreAuthorize("isAuthenticated()" )
     @PostMapping("/book")
-    @PreAuthorize("hasAuthority('USER')")
+   // @PreAuthorize("hasAuthority('USER')")
     public EmergencyBookingResponseDto bookAmbulance(@RequestBody EmergencyBookingCreateDto createDto) throws Exception {
         return bookingService.bookAmbulance(createDto);
     }
