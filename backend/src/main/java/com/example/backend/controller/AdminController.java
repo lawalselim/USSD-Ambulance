@@ -28,7 +28,7 @@ public class AdminController {
     }
 
     @PostMapping
-    @PreAuthorize("isAuthenticated()" )
+    //@PreAuthorize("isAuthenticated()" )
     public ResponseEntity<User> createAdministrator(@RequestBody RegisterUserDto registerUserDto) {
         User createdAdmin = userService.createAdministrator(registerUserDto);
 

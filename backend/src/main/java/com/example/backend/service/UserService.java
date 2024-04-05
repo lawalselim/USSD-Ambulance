@@ -49,7 +49,7 @@ public class UserService {
                 .setphoneNumber(input.getPhoneNumber())
                 .setPassword(passwordEncoder.encode(input.getPassword()))
                 .setRole(optionalRole.get());
-
+        //System.out.println("I am trying to register a new user");
         return userRepository.save(user);
     }
 

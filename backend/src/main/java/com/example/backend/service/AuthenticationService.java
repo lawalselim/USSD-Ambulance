@@ -41,14 +41,13 @@ public class AuthenticationService {
         if (optionalRole.isEmpty()) {
             return null;
         }
-
         var user = new User()
                 .setName(input.getName())
                 .setEmail(input.getEmail())
                 .setphoneNumber(input.getPhoneNumber())
                 .setPassword(passwordEncoder.encode(input.getPassword()))
                 .setRole(optionalRole.get());
-
+        System.out.println("Hello,registeration, I am here");
         return userRepository.save(user);
     }
 
@@ -59,7 +58,7 @@ public class AuthenticationService {
                         input.getPassword()
                 )
         );
-
+        System.out.println("Hello,I am here");
         return userRepository.findByEmail(input.getEmail()).orElseThrow();
     }
 
