@@ -53,7 +53,7 @@ public class AdminController {
 
     }
 
-    @GetMapping("/bookings/{id}")
+    @GetMapping("/booking/{id}")
     public EmergencyBooking getBookingById(@PathVariable Long id) {
         return adminService.getBookingById(id);
     }

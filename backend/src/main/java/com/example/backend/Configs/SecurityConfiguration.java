@@ -39,6 +39,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/api/ambulance/**").authenticated()
+                .requestMatchers("/ussd/callback").permitAll()
                 .requestMatchers("/admins").authenticated()
                 .anyRequest()
                 .authenticated()
