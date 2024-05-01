@@ -1,7 +1,9 @@
 package com.example.backend.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
+import java.util.Date;
 import java.util.Optional;
 
 @Entity
@@ -15,6 +17,9 @@ public class EmergencyBooking {
     private String address;
     private double latitude;
     private double longitude;
+    @CreationTimestamp
+    @Column(updatable = false, name = "created_at")
+    private Date createdAt;
 
     @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
@@ -77,6 +82,15 @@ public class EmergencyBooking {
 
     public EmergencyBooking setLongitude(double longitude) {
         this.longitude = longitude;
+        return this;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public EmergencyBooking setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
         return this;
     }
 

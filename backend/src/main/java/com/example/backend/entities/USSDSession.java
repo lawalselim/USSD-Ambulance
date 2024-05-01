@@ -11,6 +11,9 @@ public class USSDSession {
     private EmergencyTypeEnum emergencyType;
     private String location;
     private Integer step;
+    private String name; // Add name field
+    private String email; // Add email field
+    private String password;
 
     // Constructor
     public USSDSession(String sessionId, String phoneNumber, int step) {
@@ -24,12 +27,26 @@ public class USSDSession {
 
     }
 
+    public USSDSession(String sessionId) {
+        this.sessionId = sessionId;
+        // Set default values if necessary
+        this.phoneNumber = "";  // Default or null, depending on your logic
+        this.step = 1;          // Assuming '1' is the initial step if not provided
+    }
+
     // Adding getters
     public String getSessionId() { return sessionId; }
     public String getPhoneNumber() { return phoneNumber; }
     public EmergencyTypeEnum getEmergencyType() { return emergencyType; }
     public String getLocation() { return location; }
     public Integer getStep() { return step; }
+
+    public String getName() { return name; }
+    public String getEmail() { return email; }
+
+    public String getPassword(){
+        return password;
+    }
 
 
     // and setters
@@ -41,6 +58,12 @@ public class USSDSession {
     }
     public void setLocation(String location) { this.location = location; }
     public void setStep(Integer step) { this.step = step; }
+
+    public void setName(String name) { this.name = name; }
+    public void setEmail(String email) { this.email = email; }
+
+    public void setPassword(String password){this.password = password;}
+
 
 
 }

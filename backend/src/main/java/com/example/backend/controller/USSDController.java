@@ -2,13 +2,16 @@ package com.example.backend.controller;
 
 import com.example.backend.dto.EmergencyBookingCreateDto;
 import com.example.backend.dto.EmergencyBookingResponseDto;
+import com.example.backend.dto.RegisterUserDto;
 import com.example.backend.entities.EmergencyType;
 import com.example.backend.entities.EmergencyTypeEnum;
 import com.example.backend.entities.USSDSession;
 import com.example.backend.exceptions.GeocodingException;
 import com.example.backend.exceptions.UserNotFoundException;
 import com.example.backend.repository.USSDSessionRepository;
+import com.example.backend.service.AuthenticationService;
 import com.example.backend.service.EmergencyBookingService;
+import com.example.backend.service.UserService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +51,14 @@ public class USSDController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private AuthenticationService authenticationService;
+
+    /*
+    * This block of code handles api to book an ambulance
+    * by
+    *
+    * */
     @PostMapping("/callback")
     public void handleUSSDRequest(@RequestBody String requestBody, HttpServletResponse response) throws IOException {
         Map<String, String> body = Arrays.asList(requestBody.split("&"))
@@ -226,6 +237,16 @@ public class USSDController {
             return "END An error occurred while processing your booking. Please try again.";
         }
     }
+
+
+
+/*
+* This block of code section implements
+* Africas Talking USSD API
+* Do not tamper with it.
+*
+* The USSD code to book an ambulance on dev is *384*15845#
+* */
 
     private void sendSMS(String phoneNumber, String message) {
         String apiUrl = "https://api.africastalking.com/version1/messaging";

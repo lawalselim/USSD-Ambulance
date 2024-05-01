@@ -4,6 +4,8 @@ import { useState } from "react";
 import classnames from "classnames";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
+
+
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
 // reactstrap components
@@ -31,6 +33,14 @@ import {
 } from "variables/charts.js";
 
 import StatCard from "../components/Headers/StatCard.js";
+import EmergencyTypeChart from "../variables/EmergencyTypeChart";
+import EmergencyMapFlasher from "../variables/EmergencyMapFlasher";
+import TopAddresses from '../variables/TopAddresses';
+import TopAddressByEmergencyType from "../variables/TopAddresssByEmergencyType"
+
+// Showing address with request on the map
+
+import EmergencyMap from '../variables/EmergencyMap';
 
 const Dashboard = (props) => {
   const [activeNav, setActiveNav] = useState(1);
@@ -51,7 +61,8 @@ const Dashboard = (props) => {
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
-          <Col className="mb-5 mb-xl-0" xl="8">
+          {/*Address Mapping for address with more emergencies*/}
+          <Col className="mb-5 mb-xl-0" xl="8" style={{  marginTop: '30px' }}>
             <Card className="bg-gradient-default shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
@@ -59,51 +70,17 @@ const Dashboard = (props) => {
                     <h6 className="text-uppercase text-light ls-1 mb-1">
                       Overview
                     </h6>
-                    <h2 className="text-white mb-0">Booking Rate</h2>
-                  </div>
-                  <div className="col">
-                    <Nav className="justify-content-end" pills>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 1,
-                          })}
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 1)}
-                        >
-                          <span className="d-none d-md-block">Month</span>
-                          <span className="d-md-none">M</span>
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 2,
-                          })}
-                          data-toggle="tab"
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 2)}
-                        >
-                          <span className="d-none d-md-block">Week</span>
-                          <span className="d-md-none">W</span>
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
+                    <h2 className="text-white mb-0">New Emergency Flasher</h2>
                   </div>
                 </Row>
               </CardHeader>
               <CardBody>
                 {/* Chart */}
-                <div className="chart">
-                  <Line
-                    data={chartExample1[chartExample1Data]}
-                    options={chartExample1.options}
-                    getDatasetAtEvent={(e) => console.log(e)}
-                  />
-                </div>
+                <EmergencyMapFlasher />
               </CardBody>
             </Card>
           </Col>
+          {/*Testing Top-address barchart*/}
           <Col xl="4">
             <Card className="shadow">
               <CardHeader className="bg-transparent">
@@ -119,16 +96,69 @@ const Dashboard = (props) => {
               <CardBody>
                 {/* Chart */}
                 <div className="chart">
-                  <Bar
-                    data={chartExample2.data}
-                    options={chartExample2.options}
-                  />
+
+                  <TopAddresses/>
+
                 </div>
               </CardBody>
             </Card>
           </Col>
+          {/*Testing the EmergencyChart*/}
+          <Col xl="4" style={{  marginTop: '30px', width:"250px" }}>
+            <Card className="shadow">
+              <CardHeader className="bg-transparent">
+                <Row className="align-items-center">
+                  <div className="col">
+                    <h6 className="text-uppercase text-muted ls-1 mb-1">
+                      Performance
+                    </h6>
+                    <h2 className="mb-0">Emergency Type Frequency</h2>
+                  </div>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                {/* Chart */}
+                <div className="chart">
+                  <  EmergencyTypeChart />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+          {/*Address Mapping for address with more emergencies*/}
+          <Col className="mb-5 mb-xl-0" xl="8" style={{  marginTop: '30px' }}>
+            <Card className="bg-gradient-default shadow">
+              <CardHeader className="bg-transparent">
+                <Row className="align-items-center">
+                  <div className="col">
+                    <h6 className="text-uppercase text-light ls-1 mb-1">
+                      Overview
+                    </h6>
+                    <h2 className="text-white mb-0">Emergency Heat Map</h2>
+                  </div>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                {/* Chart */}
+                <EmergencyMap />
+              </CardBody>
+            </Card>
+          </Col>
         </Row>
+        <Container>
 
+            <div  >
+              <TopAddresses/>
+            </div>
+
+        </Container>
+
+        <Container>
+
+            <div className="Col" style={{height: '300px', width: '100%'}}>
+              <TopAddressByEmergencyType/>
+            </div>
+
+        </Container>
       </Container>
     </>
   );
