@@ -1,6 +1,5 @@
-
-import { Link } from "react-router-dom";
-// reactstrap components
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownItem,
@@ -19,14 +18,19 @@ import {
 } from "reactstrap";
 
 const AdminNavbar = (props) => {
+  const navigate = useNavigate(); // Hook for programmatic navigation
+
+  // Function to handle logout
+  const handleLogout = (event) => {
+    event.preventDefault(); // Prevent the default anchor click behavior
+    localStorage.removeItem('jwt'); // Assuming JWT is stored in localStorage, adjust if needed
+    navigate('/auth/login'); // Redirect to the login page
+  };
+
   return (
-    <>
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
         <Container fluid>
-          <Link
-            className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/"
-          >
+          <Link className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" to="/">
             {props.brandText}
           </Link>
           <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -45,16 +49,11 @@ const AdminNavbar = (props) => {
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
-                  <span className="avatar avatar-sm rounded-circle">
-                    <img
-                      alt="..."
-                      src={require("../../assets/img/theme/team-4-800x800.jpg")}
-                    />
-                  </span>
+                <span className="avatar avatar-sm rounded-circle">
+                  <img alt="..." src={require("../../assets/img/theme/team-4-800x800.jpg")} />
+                </span>
                   <Media className="ml-2 d-none d-lg-block">
-                    <span className="mb-0 text-sm font-weight-bold">
-                      Selim Lawal
-                    </span>
+                    <span className="mb-0 text-sm font-weight-bold">Selim Lawal</span>
                   </Media>
                 </Media>
               </DropdownToggle>
@@ -67,7 +66,7 @@ const AdminNavbar = (props) => {
                   <span>My profile</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem href="#pablo" onClick={handleLogout}>
                   <i className="ni ni-user-run" />
                   <span>Logout</span>
                 </DropdownItem>
@@ -76,7 +75,6 @@ const AdminNavbar = (props) => {
           </Nav>
         </Container>
       </Navbar>
-    </>
   );
 };
 

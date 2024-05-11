@@ -40,7 +40,7 @@ public class SecurityConfiguration {
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll()
-                .requestMatchers("/api/ambulance/**").authenticated()
+                .requestMatchers("/api/ambulance/**").permitAll()
                 .requestMatchers("/ussd/callback").permitAll()
                 .requestMatchers("/ussd/register").permitAll()
                 .requestMatchers("/admins/**").permitAll()

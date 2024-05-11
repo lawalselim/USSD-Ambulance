@@ -1,7 +1,7 @@
 
 /*eslint-disable*/
 import { useState } from "react";
-import { NavLink as NavLinkRRD, Link } from "react-router-dom";
+import { NavLink as NavLinkRRD, Link, useNavigate } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
@@ -40,6 +40,7 @@ var ps;
 
 const Sidebar = (props) => {
   const [collapseOpen, setCollapseOpen] = useState();
+  const navigate = useNavigate();
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
     return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
@@ -52,6 +53,12 @@ const Sidebar = (props) => {
   const closeCollapse = () => {
     setCollapseOpen(false);
   };
+  //function to handle logout
+  const handleLogout = (e) =>{
+    e.preventDefault();
+    localStorage.removeItem('jwt'); // this section clears the JWT token in the local storage
+    navigate('/auth/login', {replace: true}); //redirect the user to login screen
+  }
   // creates the links that appear in the left menu / Sidebar
   const createLinks = (routes) => {
     return routes.map((prop, key) => {
@@ -158,7 +165,7 @@ const Sidebar = (props) => {
                 <span>Support</span>
               </DropdownItem>
               <DropdownItem divider />
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+              <DropdownItem href="#pablo" onClick={handleLogout}>
                 <i className="ni ni-user-run" />
                 <span>Logout</span>
               </DropdownItem>
@@ -178,7 +185,7 @@ const Sidebar = (props) => {
                     </Link>
                   ) : (
                     <a href={logo.outterLink}>
-                      <img alt={logo.imgAlt} src={logo.imgSrc} />
+                      <img alt={logo.imgAlt} src={logo.imgSrc}/>
                     </a>
                   )}
                 </Col>
@@ -208,9 +215,9 @@ const Sidebar = (props) => {
   );
 };
 
-Sidebar.defaultProps = {
-  routes: [{}],
-};
+// Sidebar.defaultProps = {
+//   routes: [{}],
+// };
 
 Sidebar.propTypes = {
   // links that will be displayed inside the component

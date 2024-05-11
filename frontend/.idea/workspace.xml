@@ -5,52 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28a7aab7-7a16-4b7c-a91a-91f2031b6815" name="Changes" comment="rebuilt the backend structure">
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-24.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-27.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-28.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-29.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/UssdAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/controller/AdminControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/controller/EmergencyBookingControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/controller/USSDControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/controller/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/service/AdminServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/service/AmbulanceServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/service/EmergencyBookingServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/service/GoogleMapServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/BookingService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/StatService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/UserService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/BookingChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/EmergencyMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/EmergencyMapFlasher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/EmergencyTypeChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/TopAddresses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/TopAddresssByEmergencyType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.0259629886401586.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.0289458255046544.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.1260448094739920.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-03.0206503389827911.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-08.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-09.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-10.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/system.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/brand/splash_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/ProtectedRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/AuthService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/examples/BookingDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/lognew.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/lognew.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-03-28.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-03-29.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-03-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-01.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-24.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-27.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-28.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-29.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-30.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/Configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/Configs/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/bootstrap/AmbulanceSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/bootstrap/AmbulanceSeeder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/USSDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/USSDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entities/EmergencyBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entities/EmergencyBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entities/USSDSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entities/USSDSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/repository/EmergencyBookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/repository/EmergencyBookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/EmergencyBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/EmergencyBookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Headers/StatCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/StatCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AuthNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AuthNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/Ambulance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Ambulance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/Bookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Bookings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/examples/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +55,21 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,33 +85,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/apple/Documents/GitHub/USSD-Ambulance/frontend/src/service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/apple/Documents/GitHub/USSD-Ambulance/frontend/src/assets/img/brand",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.npm start.executor": "Run",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/img/brand" />
       <recent name="$PROJECT_DIR$/src/service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/auth" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -121,6 +139,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -145,7 +168,9 @@
       <workItem from="1713971835450" duration="1466000" />
       <workItem from="1714235292208" duration="2706000" />
       <workItem from="1714317370211" duration="963000" />
-      <workItem from="1714458525290" duration="432000" />
+      <workItem from="1714458525290" duration="3821000" />
+      <workItem from="1715009401067" duration="132000" />
+      <workItem from="1715193485177" duration="24114000" />
     </task>
     <task id="LOCAL-00001" summary="rebuilt the backend structure">
       <option name="closed" value="true" />

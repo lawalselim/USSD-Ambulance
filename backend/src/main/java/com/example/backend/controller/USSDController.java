@@ -227,7 +227,7 @@ public class USSDController {
             EmergencyBookingResponseDto responseDto = emergencyBookingService.bookAmbulance(dto);
 
             String bookingDetailsMessage = String.format(
-                    "Booking confirmed. Location: %s. Latitude: %f, Longitude: %f",
+                    "Booking confirmed, Help is on its way. Location: %s. Latitude: %f, Longitude: %f",
                    responseDto.getAddress(), responseDto.getLatitude(), responseDto.getLongitude());
 
            ussdSessionRepository.delete(session);
@@ -252,10 +252,11 @@ public class USSDController {
         String apiUrl = "https://api.africastalking.com/version1/messaging";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("apiKey", "84b4b91d84ac4283281c0db2d554f0d68fc263eb04183f3ec6333392f2297f6e");
+        headers.set("apiKey", "3299f7bbbd311be8e9dbf5e6d6c88eb772129c419e4fb852c48cc073bda7eed5");
+        //headers.set("apiKey", "84b4b91d84ac4283281c0db2d554f0d68fc263eb04183f3ec6333392f2297f6e");
 
         Map<String, Object> smsRequestBody = new HashMap<>();
-        smsRequestBody.put("username", "sandbox");
+        smsRequestBody.put("username", "USSDAmbulance");
         smsRequestBody.put("to", phoneNumber);
         smsRequestBody.put("message", message);
 

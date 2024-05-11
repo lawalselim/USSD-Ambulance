@@ -39,9 +39,13 @@ public class EmergencyBookingService {
     private final EmergencyTypeRepository emergencyTypeRepository;
 
     @Autowired
-    public EmergencyBookingService(EmergencyTypeRepository emergencyTypeRepository) {
-        this.emergencyTypeRepository = emergencyTypeRepository;
+    public EmergencyBookingService(EmergencyTypeRepository emergencyTypeRepository, UserRepository userRepository,
+                                   GoogleMapsService googleMapsService, AddressRepository addressRepository) {
+       this.emergencyTypeRepository = emergencyTypeRepository;
+        this.userRepository = userRepository;
+        this.googleMapsService = googleMapsService;
     }
+
 
 
     @Transactional
@@ -101,7 +105,7 @@ public class EmergencyBookingService {
 
         // Construct success message including geolocation
         String successMessage = String.format(
-                "Your ambulance has been booked successfully. Location: %s. Latitude: %f, Longitude: %f",
+                "Your ambulance has been booked successfully and Help is on its way. Location: %s. Latitude: %f, Longitude: %f",
                 createDto.getAddress(), coordinates[0], coordinates[1]);
 
         return new EmergencyBookingResponseDto(
