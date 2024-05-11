@@ -230,3 +230,39 @@ java.lang.IllegalArgumentException: rawPassword cannot be null
 2024-05-11T16:50:39.746+01:00  INFO 59748 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-11T16:50:40.129+01:00  INFO 59748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-05-11T16:50:40.271+01:00  INFO 59748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-05-11T17:49:43.820+01:00  INFO 94514 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 21.0.2 with PID 94514 (/Users/apple/Documents/GitHub/USSD-Ambulance/backend/target/classes started by apple in /Users/apple/Documents/GitHub/USSD-Ambulance/backend)
+2024-05-11T17:49:43.824+01:00 DEBUG 94514 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-05-11T17:49:43.826+01:00  INFO 94514 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-11T17:49:45.596+01:00  INFO 94514 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-11T17:49:45.799+01:00  INFO 94514 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 8 JPA repository interfaces.
+2024-05-11T17:49:47.447+01:00  INFO 94514 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8005 (http)
+2024-05-11T17:49:47.470+01:00  INFO 94514 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-11T17:49:47.471+01:00  INFO 94514 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-05-11T17:49:47.707+01:00  INFO 94514 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-11T17:49:47.708+01:00  INFO 94514 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3733 ms
+2024-05-11T17:49:48.118+01:00  INFO 94514 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2024-05-11T17:49:48.118+01:00  INFO 94514 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-05-11T17:49:48.118+01:00  INFO 94514 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-05-11T17:49:48.140+01:00  INFO 94514 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-11T17:49:48.580+01:00  INFO 94514 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@126f8f24
+2024-05-11T17:49:48.585+01:00  INFO 94514 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-11T17:49:48.606+01:00  INFO 94514 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/ussddb (MySQL 5.5)
+2024-05-11T17:49:48.765+01:00  INFO 94514 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.034s)
+2024-05-11T17:49:48.766+01:00  WARN 94514 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-05-11T17:49:48.802+01:00  INFO 94514 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `ussddb`: << Empty Schema >>
+2024-05-11T17:49:48.807+01:00  INFO 94514 --- [main] o.f.core.internal.command.DbMigrate      : Schema `ussddb` is up to date. No migration necessary.
+2024-05-11T17:49:49.336+01:00  INFO 94514 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-11T17:49:49.589+01:00  INFO 94514 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-05-11T17:49:49.597+01:00  INFO 94514 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-11T17:49:50.382+01:00  INFO 94514 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-11T17:49:50.544+01:00  WARN 94514 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-05-11T17:49:53.153+01:00  INFO 94514 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-11T17:49:53.344+01:00  INFO 94514 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-11T17:49:54.715+01:00 DEBUG 94514 --- [main] c.e.b.Configs.JwtAuthenticationFilter    : Filter 'jwtAuthenticationFilter' configured for use
+2024-05-11T17:49:55.151+01:00  INFO 94514 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-11T17:49:57.483+01:00  INFO 94514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e87c4cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bb2b910, org.springframework.security.web.context.SecurityContextHolderFilter@589dac96, org.springframework.security.web.header.HeaderWriterFilter@1bd97254, org.springframework.web.filter.CorsFilter@5a4ceb1, org.springframework.security.web.authentication.logout.LogoutFilter@62291850, com.example.backend.Configs.JwtAuthenticationFilter@76ebd595, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e60925d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30a1b9b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fc4e667, org.springframework.security.web.session.SessionManagementFilter@492d0748, org.springframework.security.web.access.ExceptionTranslationFilter@46199519, org.springframework.security.web.access.intercept.AuthorizationFilter@7861a433]
+2024-05-11T17:49:58.277+01:00  INFO 94514 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8005 (http) with context path ''
+2024-05-11T17:49:58.827+01:00  INFO 94514 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 16.099 seconds (process running for 22.048)
+2024-05-11T18:00:05.358+01:00  INFO 94514 --- [http-nio-8005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-11T18:00:05.363+01:00  INFO 94514 --- [http-nio-8005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-11T18:00:05.415+01:00  INFO 94514 --- [http-nio-8005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 51 ms
