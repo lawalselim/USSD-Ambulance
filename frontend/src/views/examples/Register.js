@@ -105,6 +105,20 @@ const Register = () => {
                   />
                 </InputGroup>
               </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-lock-circle-open" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                      placeholder="PhoneNumber"
+                      type="text"
+                      autoComplete="phone-number"
+                  />
+                </InputGroup>
+              </FormGroup>
               <div className="text-muted font-italic">
                 <small>
                   password strength:{" "}

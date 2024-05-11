@@ -4,43 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28a7aab7-7a16-4b7c-a91a-91f2031b6815" name="Changes" comment="rebuilt the backend structure">
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.0259629886401586.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.0289458255046544.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-02.1260448094739920.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-03.0206503389827911.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-08.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-09.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/lognew.txt.2024-05-10.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/system.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/brand/splash_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/ProtectedRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/AuthService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/examples/BookingDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/lognew.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-24.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-27.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-28.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-29.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/lognew.txt.2024-04-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/Configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/Configs/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/bootstrap/AmbulanceSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/bootstrap/AmbulanceSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/USSDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/controller/USSDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/EmergencyBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/EmergencyBookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AuthNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AuthNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+    <list default="true" id="28a7aab7-7a16-4b7c-a91a-91f2031b6815" name="Changes" comment="added login auth to admin, added individual booking details screen.">
       <change beforePath="$PROJECT_DIR$/src/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/examples/Ambulance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Ambulance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/examples/Bookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Bookings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +137,7 @@
       <workItem from="1714317370211" duration="963000" />
       <workItem from="1714458525290" duration="3821000" />
       <workItem from="1715009401067" duration="132000" />
-      <workItem from="1715193485177" duration="24114000" />
+      <workItem from="1715193485177" duration="24423000" />
     </task>
     <task id="LOCAL-00001" summary="rebuilt the backend structure">
       <option name="closed" value="true" />
@@ -180,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710939421296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added login auth to admin, added individual booking details screen.">
+      <option name="closed" value="true" />
+      <created>1715442795783</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715442795783</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +203,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Made changes to the frontend file" />
     <MESSAGE value="rebuilt the backend structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="rebuilt the backend structure" />
+    <MESSAGE value="added login auth to admin, added individual booking details screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="added login auth to admin, added individual booking details screen." />
   </component>
 </project>

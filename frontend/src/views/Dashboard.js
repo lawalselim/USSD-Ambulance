@@ -146,7 +146,7 @@ const Dashboard = (props) => {
         </Row>
         <Container>
 
-            <div  >
+            <div >
               <TopAddresses/>
             </div>
 
