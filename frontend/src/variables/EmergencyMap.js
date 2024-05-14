@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
-// Fix the default icon problem in Leaflet 1.x when using webpack
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-});
+const mapContainerStyle = {
+    height: "500px",
+    width: "100%"
+};
+
+const center = {
+    lat: 51.505,
+    lng: -0.09
+};
 
 const EmergencyMap = () => {
     const [locations, setLocations] = useState([]);
+    const [selected, setSelected] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:8005/admins/top-locations')
@@ -29,19 +31,33 @@ const EmergencyMap = () => {
     }, []);
 
     return (
-        <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '500px', width: '100%', }}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {locations.map((loc, index) => (
-                <Marker key={index} position={[loc.lat, loc.lng]}>
-                    <Popup>
-                        {loc.address} has {loc.count} emergency calls.
-                    </Popup>
-                </Marker>
-            ))}
-        </MapContainer>
+        <LoadScript
+            googleMapsApiKey="AIzaSyD40ABR79k9VKd7DXt8CSDat9ZIQxYZRNk"
+        >
+            <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                center={center}
+                zoom={13}
+            >
+                {locations.map((loc, index) => (
+                    <Marker
+                        key={index}
+                        position={{ lat: loc.lat, lng: loc.lng }}
+                        onClick={() => setSelected(loc)}
+                    />
+                ))}
+                {selected ? (
+                    <InfoWindow
+                        position={{ lat: selected.lat, lng: selected.lng }}
+                        onCloseClick={() => setSelected(null)}
+                    >
+                        <div>
+                            {selected.address} has {selected.count} emergency calls.
+                        </div>
+                    </InfoWindow>
+                ) : null}
+            </GoogleMap>
+        </LoadScript>
     );
 };
 

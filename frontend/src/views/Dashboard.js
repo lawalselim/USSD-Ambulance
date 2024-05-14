@@ -61,48 +61,9 @@ const Dashboard = (props) => {
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
-          {/*Address Mapping for address with more emergencies*/}
-          <Col className="mb-5 mb-xl-0" xl="8" style={{  marginTop: '30px' }}>
-            <Card className="bg-gradient-default shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-light ls-1 mb-1">
-                      Overview
-                    </h6>
-                    <h2 className="text-white mb-0">New Emergency Flasher</h2>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <EmergencyMapFlasher />
-              </CardBody>
-            </Card>
-          </Col>
+          
           {/*Testing Top-address barchart*/}
-          <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Performance
-                    </h6>
-                    <h2 className="mb-0">Total Bookings</h2>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <div className="chart">
 
-                  <TopAddresses/>
-
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
           {/*Testing the EmergencyChart*/}
           <Col xl="4" style={{  marginTop: '30px', width:"250px" }}>
             <Card className="shadow">

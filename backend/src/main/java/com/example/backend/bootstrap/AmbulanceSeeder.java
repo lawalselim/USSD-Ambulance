@@ -22,8 +22,8 @@ public class AmbulanceSeeder implements ApplicationListener<ContextRefreshedEven
     private void seedAmbulanceData() {
         // Check if ambulances are already seeded to avoid duplication
         long count = ambulanceRepository.count();
-        if (count == 501) {
-            for (int i = 1; i <= 500; i++) {
+        if (count == 550) {
+            for (int i = 1; i <= 550; i++) {
                 Ambulance ambulance = new Ambulance();
                 // Assuming each ambulance has a unique license plate for identification
                 ambulance.setLicensePlate("AMB-" + String.format("%05d", i));
@@ -31,7 +31,7 @@ public class AmbulanceSeeder implements ApplicationListener<ContextRefreshedEven
 
                 ambulanceRepository.save(ambulance);
             }
-            System.out.println("500 ambulances seeded into the database.");
+            System.out.println(" ambulances seeded into the database.");
         } else {
             System.out.println("Skipping ambulance seeding as data already exists.");
         }

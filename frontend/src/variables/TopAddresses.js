@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Pie } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 const TopAddresses = () => {
     const [chartData, setChartData] = useState({
@@ -46,19 +46,26 @@ const TopAddresses = () => {
         maintainAspectRatio: false,
         legend: {
             display: true,
-            position: 'bottom', // Position of legend
+            position: 'bottom',
             labels: {
-                fontColor: '#333', // Color of text
-                fontSize: 14, // Size of text
-                boxWidth: 20, // Size of color box
+                fontColor: '#333',
+                fontSize: 14,
+                boxWidth: 20
             }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
         }
     };
 
     return (
         <div style={{ height: '300px', width: '100%', marginTop:"50px" }}>
             <h2>Top Emergency Addresses</h2>
-            <Pie data={chartData} options={options} />
+            <Bar data={chartData} options={options} />
         </div>
     );
 };

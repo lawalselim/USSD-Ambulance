@@ -12,15 +12,6 @@ import java.util.List;
 @Repository
 public interface EmergencyBookingRepository extends JpaRepository<EmergencyBooking, Long> {
 
-//    @Query("SELECT COUNT(e), DATE(e.createdAt) FROM EmergencyBooking e GROUP BY DATE(e.createdAt)")
-//    List<Object[]> countBookingsPerDay();
-//
-//    @Query("SELECT COUNT(e), MONTH(e.createdAt), YEAR(e.createdAt) FROM EmergencyBooking e GROUP BY YEAR(e.createdAt), MONTH(e.createdAt)")
-//    List<Object[]> countBookingsPerMonth();
-//
-//    @Query("SELECT COUNT(e), YEAR(e.createdAt) FROM EmergencyBooking e GROUP BY YEAR(e.createdAt)")
-//    List<Object[]> countBookingsPerYear();
-
     @Query("SELECT e FROM EmergencyBooking e ORDER BY e.createdAt DESC")
     List<EmergencyBooking> findTop5NewBookings();
 
